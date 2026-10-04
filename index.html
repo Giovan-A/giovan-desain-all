@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="id" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giovan Desain All - Studio Produk Digital & Web Pro</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 antialiased font-sans transition-colors duration-300">
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-40 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- LOGO BRANDING -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-brand-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-brand-500/30">
+                        G
+                    </div>
+                    <div>
+                        <span class="text-lg font-extrabold tracking-tight text-slate-900 dark:text-white block leading-none">Giovan Desain All</span>
+                        <span class="text-[10px] font-medium text-brand-600 dark:text-brand-400 tracking-wider uppercase">Digital Product & Web Studio</span>
+                    </div>
+                </div>
+
+                <!-- NAV MENU LINKS -->
+                <div class="hidden md:flex items-center gap-8 font-medium text-slate-600 dark:text-slate-300 text-sm">
+                    <a href="#hero" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Beranda</a>
+                    <a href="#katalog" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Portofolio</a>
+                    <a href="#live-case" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Proyek Live</a>
+                    <a href="#harga" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Paket Harga</a>
+                </div>
+
+                <!-- RIGHT ACTION BUTTONS (TOGGLE THEME + ORDER) -->
+                <div class="flex items-center gap-3">
+                    <!-- TOGGLE TEMA TERANG / GELAP -->
+                    <button onclick="toggleTheme()" id="themeToggleBtn" aria-label="Toggle Theme" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-all">
+                        <i id="themeIcon" class="fa-solid fa-sun text-amber-500"></i>
+                    </button>
+
+                    <a href="#pesan" class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm px-4 py-2.5 rounded-xl shadow-md shadow-brand-600/20 transition-all hover:scale-[1.02]">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="hidden sm:inline">Pesan Layanan</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION / DASHBOARD SHOWCASE -->
+    <section id="hero" class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden bg-gradient-to-b from-brand-50/50 dark:from-slate-900 via-slate-50 dark:via-slate-950 to-slate-50 dark:to-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="inline-flex items-center gap-2 bg-brand-100 dark:bg-brand-500/10 border border-brand-200 dark:border-brand-500/30 text-brand-700 dark:text-brand-400 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider mb-6">
+                    <i class="fa-solid fa-bolt"></i> Portofolio Usaha Digital Mandiri
+                </span>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight mb-6">
+                    Showcase & Etalase Produk Digital Modern
+                </h1>
+                <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                    Menyediakan paket template web promosi interaktif dan aset visual berkualitas tinggi untuk mendorong pertumbuhan UMKM dan komunitas lokal.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#harga" class="bg-brand-600 hover:bg-brand-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-brand-600/25 transition-all text-center">
+                        Lihat Rincian Fitur Paket
+                    </a>
+                    <a href="#live-case" class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold px-8 py-4 rounded-xl transition-all text-center">
+                        Pratinjau Web Hasil Produksi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KATALOG & FILTER SECTION -->
+    <section id="katalog" class="py-20 bg-white dark:bg-slate-950 border-y border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Galeri Aset & Template Visual</h2>
+                <p class="text-slate-600 dark:text-slate-400">Pilih filter di bawah ini untuk melihat contoh aset visual dan struktur halaman web yang tersedia.</p>
+            </div>
+
+            <!-- BUTTON FILTER -->
+            <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-12" id="filter-buttons">
+                <button onclick="filterKatalog('all')" class="filter-btn active bg-brand-600 text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition-all shadow-md">
+                    Semua Produk
+                </button>
+                <button onclick="filterKatalog('web')" class="filter-btn bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 font-semibold px-5 py-2.5 rounded-xl text-sm transition-all">
+                    <i class="fa-solid fa-code mr-1.5"></i> Template Web
+                </button>
+                <button onclick="filterKatalog('poster')" class="filter-btn bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 font-semibold px-5 py-2.5 rounded-xl text-sm transition-all">
+                    <i class="fa-solid fa-image mr-1.5"></i> Poster & Flyer
+                </button>
+                <button onclick="filterKatalog('label')" class="filter-btn bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 font-semibold px-5 py-2.5 rounded-xl text-sm transition-all">
+                    <i class="fa-solid fa-box-open mr-1.5"></i> Label Kemasan
+                </button>
+            </div>
+
+            <!-- GRID KATALOG ITEM -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="katalog-grid">
+                
+                <!-- Item 1: Web -->
+                <div class="katalog-item web bg-slate-50 dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-lg hover:border-brand-500/50 transition-all duration-300">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Web Kuliner" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-full">Template Web</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl text-slate-900 dark:text-white mb-2">Web Showcase Cafe & Resto</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Landing page menu digital interaktif dengan integrasi tombol pemesanan langsung via WhatsApp.</p>
+                        <div class="flex justify-between items-center pt-4 border-t border-slate-200 dark:border-slate-800">
+                            <span class="text-brand-600 dark:text-brand-400 font-extrabold text-lg">Rp150.000</span>
+                            <button onclick="openProductDetail('Web Showcase Cafe & Resto', 'Landing page responsif khusus usaha makanan dan minuman. Dilengkapi fitur galeri menu, tombol order WhatsApp instan, serta integrasi peta lokasi usaha.', 'Rp150.000', ['Desain Responsif Mobile/Desktop', 'Gratis Hosting Vercel/Netlify', 'Integrasi Tombol WhatsApp'])" class="text-xs font-bold bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-brand-600 dark:text-brand-400 border border-slate-200 dark:border-slate-700 px-3.5 py-2 rounded-lg transition-colors">
+                                Rincian Fitur <i class="fa-solid fa-chevron-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Poster -->
+                <div class="katalog-item poster bg-slate-50 dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-lg hover:border-purple-500/50 transition-all duration-300">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80" alt="Poster Event" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">Poster & Flyer</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl text-slate-900 dark:text-white mb-2">Poster Fun Run & Event Olahraga</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Materi visual promosi resolusi tinggi yang siap dipublikasikan di media sosial atau dicetak.</p>
+                        <div class="flex justify-between items-center pt-4 border-t border-slate-200 dark:border-slate-800">
+                            <span class="text-purple-600 dark:text-purple-400 font-extrabold text-lg">Rp50.000</span>
+                            <button onclick="openProductDetail('Poster Fun Run & Event', 'Aset visual flyer promosi resolusi tinggi. Diproses dengan keahlian tata letak modern agar pesan promosi tersampaikan dengan tegas.', 'Rp50.000', ['Format Siap Cetak (PDF/PNG)', 'Orientasi Vertikal & Horizontal', 'Revisi Garansi 2x'])" class="text-xs font-bold bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-purple-600 dark:text-purple-400 border border-slate-200 dark:border-slate-700 px-3.5 py-2 rounded-lg transition-colors">
+                                Rincian Fitur <i class="fa-solid fa-chevron-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Label -->
+                <div class="katalog-item label bg-slate-50 dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-lg hover:border-emerald-500/50 transition-all duration-300">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1589927986089-35812388d1f4?auto=format&fit=crop&w=600&q=80" alt="Label Kemasan" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full">Label Kemasan</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl text-slate-900 dark:text-white mb-2">Label Botol Kemasan Madu</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Rancangan stiker label produk lengkap dengan informasi gizi, netto, dan skema warna premium.</p>
+                        <div class="flex justify-between items-center pt-4 border-t border-slate-200 dark:border-slate-800">
+                            <span class="text-emerald-600 dark:text-emerald-400 font-extrabold text-lg">Rp75.000</span>
+                            <button onclick="openProductDetail('Label Botol Kemasan Madu', 'Tata letak label kemasan produk siap cetak. Disesuaikan dengan ukuran fisik botol atau toples usaha milik pelanggan.', 'Rp75.000', ['Ukuran Presisi Die-Cut', 'Tampilan Mockup 3D', 'Format Siap Cetak Vendor'])" class="text-xs font-bold bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-emerald-600 dark:text-emerald-400 border border-slate-200 dark:border-slate-700 px-3.5 py-2 rounded-lg transition-colors">
+                                Rincian Fitur <i class="fa-solid fa-chevron-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PAKET HARGA SECTION -->
+    <section id="harga" class="py-20 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Paket Layanan Digital</h2>
+                <p class="text-slate-600 dark:text-slate-400">Klik tombol "Pelajari Spesifikasi" untuk melihat keunggulan rinci dari tiap paket sebelum memesan.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Paket Basic -->
+                <div class="bg-white dark:bg-slate-950 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Paket Starter Digital</h3>
+                                <p class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mt-1">Aset Visual & Promosi</p>
+                            </div>
+                            <span class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold px-3 py-1 rounded-full">Entry Level</span>
+                        </div>
+                        <div class="text-3xl font-extrabold text-brand-600 dark:text-brand-400 mb-6">Rp75.000</div>
+                        <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-300 mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-600 dark:text-brand-500"></i> 1 Desain Poster / Flyer Promosi HD</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-600 dark:text-brand-500"></i> Penataan Layout Label Kemasan</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-600 dark:text-brand-500"></i> Garansi 2x Revisi Minor</li>
+                        </ul>
+                    </div>
+                    <button onclick="openPackageDetail('Starter Digital', 'Rp75.000', 'Paket yang dirancang khusus untuk memenuhi kebutuhan media visual awal UMKM atau kegiatan komunitas.', [
+                        'Pilihan Desain: 1 Poster Promosi atau 1 Desain Label Kemasan',
+                        'File Akhir: Format PNG High Resolution, JPG, dan PDF Siap Cetak',
+                        'Konsep Visual: Sesuai skema warna dan identitas usaha pelanggan',
+                        'Waktu Pengerjaan: 1 - 2 Hari Kerja'
+                    ])" class="w-full text-center bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-white font-bold py-3.5 rounded-xl transition-all border border-slate-200 dark:border-slate-700">
+                        <i class="fa-solid fa-list-check mr-2"></i> Pelajari Spesifikasi Paket
+                    </button>
+                </div>
+
+                <!-- Paket Pro UMKM -->
+                <div class="bg-white dark:bg-slate-950 p-8 rounded-2xl border-2 border-brand-600 dark:border-brand-500 shadow-md dark:shadow-2xl relative flex flex-col justify-between">
+                    <span class="absolute -top-3.5 right-6 bg-brand-600 text-white text-xs font-extrabold px-3.5 py-1 rounded-full uppercase tracking-wider shadow-md">Solusi Utama</span>
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Paket Pro UMKM Showcase</h3>
+                                <p class="text-xs font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-wider mt-1">Web + Paket Visual Lengkap</p>
+                            </div>
+                        </div>
+                        <div class="text-3xl font-extrabold text-brand-600 dark:text-brand-400 mb-6">Rp150.000</div>
+                        <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-300 mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 dark:text-emerald-400"></i> 1 Landing Page Web Responsif</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 dark:text-emerald-400"></i> Paket Aset Visual (Poster & Label Kemasan)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 dark:text-emerald-400"></i> Peluncuran Web Gratis (Netlify/Vercel)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 dark:text-emerald-400"></i> Integrasi Form & WhatsApp Direct</li>
+                        </ul>
+                    </div>
+                    <button onclick="openPackageDetail('Pro UMKM Showcase', 'Rp150.000', 'Solusi digital paling komprehensif bagi pemilik usaha yang ingin langsung memiliki website etalase aktif beserta materi promosi visualnya.', [
+                        'Website Etalase: 1 Halaman Landing Page Responsif (HTML/CSS/JS)',
+                        'Fitur Web: Galeri produk, daftar harga, dan integrasi tombol WhatsApp',
+                        'Aset Visual: Termasuk 1 Poster Promosi dan 1 Desain Label Kemasan',
+                        'Hosting & Domain: Dibantu proses deployment gratis hingga URL aktif',
+                        'Waktu Pengerjaan: 2 - 3 Hari Kerja'
+                    ])" class="w-full text-center bg-brand-600 hover:bg-brand-700 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-brand-600/30 transition-all">
+                        <i class="fa-solid fa-list-check mr-2"></i> Pelajari Spesifikasi Paket
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDY: PROYEK LIVE GIOVAN DESAIN ALL -->
+    <section id="live-case" class="py-20 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold text-brand-600 dark:text-brand-400 uppercase tracking-widest">Studi Kasus Live Proyek</span>
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mt-2 mb-4">Contoh Landing Page Terpublikasi</h2>
+                <p class="text-slate-600 dark:text-slate-400">Berikut adalah simulasi tampilan landing page interaktif yang telah di-deploy resmi oleh Giovan Desain All.</p>
+            </div>
+
+            <!-- MOCKUP BROWSER WINDOW -->
+            <div class="max-w-4xl mx-auto bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-xl dark:shadow-2xl">
+                <!-- Browser Header Bar -->
+                <div class="bg-slate-200/80 dark:bg-slate-800/80 px-4 py-3 border-b border-slate-300 dark:border-slate-700/60 flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <div class="bg-white dark:bg-slate-950 px-6 py-1 rounded-lg text-xs font-mono text-slate-600 dark:text-slate-400 flex items-center gap-2 border border-slate-300 dark:border-slate-800">
+                        <i class="fa-solid fa-lock text-[10px] text-emerald-500 dark:text-emerald-400"></i> https://giovan-desain-all.netlify.app
+                    </div>
+                    <span class="text-xs font-bold text-slate-500 dark:text-slate-400">Status: <span class="text-emerald-600 dark:text-emerald-400">Online</span></span>
+                </div>
+
+                <!-- Browser Inner Content -->
+                <div class="p-8 md:p-12 bg-gradient-to-br from-slate-100 to-white dark:from-slate-900 dark:to-slate-950">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="w-full md:w-1/2">
+                            <span class="bg-brand-100 dark:bg-brand-500/10 border border-brand-200 dark:border-brand-500/30 text-brand-700 dark:text-brand-400 text-xs font-bold px-3 py-1 rounded-full">Resmi Giovan Desain All</span>
+                            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-4 mb-3">Website Etalase Digital UMKM</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                                Contoh proyek situs web produk digital interaktif yang dilengkapi dengan galeri sampel, kalkulator paket, serta tata letak responsif yang siap di-deploy via Netlify.
+                            </p>
+                            <a href="https://giovan-desain-all.netlify.app" target="_blank" class="inline-flex items-center gap-2 bg-slate-900 dark:bg-slate-800 hover:bg-slate-800 dark:hover:bg-slate-700 text-white dark:text-brand-400 border border-slate-800 dark:border-slate-700 text-xs font-bold px-5 py-3 rounded-xl transition-all">
+                                Kunjungi Situs Live <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                        <div class="w-full md:w-1/2 bg-slate-200 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-300 dark:border-slate-700">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Mockup Web Giovan Desain All" class="rounded-lg shadow-md w-full object-cover h-48">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM PEMESANAN TERHUBUNG WHATSAPP -->
+    <section id="pesan" class="py-20 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-slate-950 p-8 md:p-10 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-md dark:shadow-2xl">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Formulir Integrasi Pemesanan</h2>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Isi rincian di bawah ini untuk mencatat pesanan ke database dan melakukan konfirmasi.</p>
+                </div>
+
+                <form id="orderForm" onsubmit="handleOrderSubmit(event)" class="space-y-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-2">Nama Lengkap / Pemilik Usaha</label>
+                        <input type="text" id="custName" required placeholder="Masukkan nama lengkap Anda..." class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-2">Pilihan Paket Layanan</label>
+                        <select id="custPackage" required class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm">
+                            <option value="Paket Starter Digital (Rp75.000)">Paket Starter Digital - Rp75.000</option>
+                            <option value="Paket Pro UMKM Showcase (Rp150.000)">Paket Pro UMKM Showcase - Rp150.000</option>
+                            <option value="Kustomisasi Produk Khusus">Kustomisasi Khusus / Diskusi Proyek</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-2">Catatan Kebutuhan / Detail Desain</label>
+                        <textarea id="custNotes" rows="3" placeholder="Tuliskan nama usaha, konsep warna, atau pesan khusus..." class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm"></textarea>
+                    </div>
+
+                    <button type="submit" id="btnSubmitOrder" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-brand-600/30 transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Proses & Konfirmasi Pesanan
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL POPUP RINCIAN FITUR PAKET & PRODUK -->
+    <div id="infoModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md hidden items-center justify-center z-50 p-4">
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl max-w-lg w-full p-6 shadow-2xl relative animate-in fade-in zoom-in duration-200">
+            <button onclick="closeInfoModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 id="modalTitle" class="text-2xl font-bold text-slate-900 dark:text-white mb-2"></h3>
+            <p id="modalPriceTag" class="text-lg font-extrabold text-brand-600 dark:text-brand-400 mb-4"></p>
+            <p id="modalDescription" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6"></p>
+            
+            <div id="modalFeaturesContainer" class="bg-slate-50 dark:bg-slate-950 p-4 rounded-xl border border-slate-200 dark:border-slate-800 mb-6">
+                <h4 class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">Spesifikasi & Cakupan Layanan:</h4>
+                <ul id="modalFeatureList" class="space-y-2 text-sm text-slate-700 dark:text-slate-300"></ul>
+            </div>
+
+            <div class="flex items-center justify-end gap-3 pt-4 border-t border-slate-200 dark:border-slate-800">
+                <button onclick="closeInfoModal()" class="px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                    Tutup
+                </button>
+                <a href="#pesan" onclick="closeInfoModal()" class="px-5 py-2.5 rounded-xl bg-brand-600 text-white text-xs font-bold hover:bg-brand-700 transition-colors">
+                    Pesan Layanan Ini
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-100 dark:bg-slate-950 text-slate-600 dark:text-slate-500 py-10 border-t border-slate-200 dark:border-slate-800 text-center text-sm transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="font-bold text-slate-800 dark:text-slate-400 mb-2">Giovan Desain All</p>
+            <p class="text-xs text-slate-500 dark:text-slate-600">&copy; 2026 Giovan Desain All. Seluruh Hak Cipta Dilindungi. Dikembangkan untuk Proyek Mandiri PKWU XII RPL.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT UTAMA -->
+    <script>
+        // 1. FITUR SAKELAR TEMA TERANG / GELAP
+        function toggleTheme() {
+            const html = document.documentElement;
+            const icon = document.getElementById('themeIcon');
+            
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                icon.className = 'fa-solid fa-moon text-slate-600';
+            } else {
+                html.classList.add('dark');
+                icon.className = 'fa-solid fa-sun text-amber-500';
+            }
+        }
+
+        // 2. FILTER KATALOG
+        function filterKatalog(category) {
+            const items = document.querySelectorAll('.katalog-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-600', 'text-white', 'shadow-md');
+                btn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
+            });
+
+            event.currentTarget.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
+            event.currentTarget.classList.add('bg-brand-600', 'text-white', 'shadow-md');
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // 3. MODAL PENJELASAN MENDALAM PAKET & PRODUK
+        function openPackageDetail(title, price, desc, features) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalPriceTag').innerText = price;
+            document.getElementById('modalDescription').innerText = desc;
+
+            const listContainer = document.getElementById('modalFeatureList');
+            listContainer.innerHTML = '';
+            features.forEach(ft => {
+                const li = document.createElement('li');
+                li.className = 'flex items-center gap-2';
+                li.innerHTML = `<i class="fa-solid fa-check text-brand-600 dark:text-brand-400 text-xs"></i> <span>${ft}</span>`;
+                listContainer.appendChild(li);
+            });
+
+            const modal = document.getElementById('infoModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function openProductDetail(title, desc, price, features) {
+            openPackageDetail(title, price, desc, features);
+        }
+
+        function closeInfoModal() {
+            const modal = document.getElementById('infoModal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        // 4. PROSES PEMESANAN VIA WHATSAPP
+        function handleOrderSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('custName').value;
+            const pkg = document.getElementById('custPackage').value;
+            const notes = document.getElementById('custNotes').value;
+
+            // Nomor WhatsApp Admin Giovan Desain All
+            const adminPhone = "6281995315100";
+
+            const waText = `Halo Giovan Desain All, saya ingin berkonsultasi / memesan layanan:\n\n` +
+                           `*Nama/Usaha:* ${name}\n` +
+                           `*Paket Layanan:* ${pkg}\n` +
+                           `*Catatan Khusus:* ${notes || '-'}\n\n` +
+                           `Mohon konfirmasi ketersediaan pengerjaannya. Terima kasih!`;
+
+            const encodedURL = `https://wa.me/${adminPhone}?text=${encodeURIComponent(waText)}`;
+            
+            // Buka WhatsApp di tab baru
+            window.open(encodedURL, '_blank');
+        }
+    </script>
+</body>
+</html>
